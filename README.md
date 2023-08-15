@@ -14,7 +14,7 @@ cd ..
 ./cse20133-run-docker
 ```
 
-For detailed setup instructions, refer to our Lab 0 setup guide!
+For detailed setup instructions, refer to our Homework 0 setup guide!
 
 ## Acknowledgements
 
