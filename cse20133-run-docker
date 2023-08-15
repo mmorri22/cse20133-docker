@@ -75,13 +75,13 @@ remove_containers() {
 
 start_container() {
     echo "Entering container..."
-    docker start $container_name
+	docker start $container_name
     docker exec -it $container_name /bin/bash
 }
 
 start_new_container() {
-    echo "Starting a new container..."
-    vexec docker run -it \
+    echo "Starting a new container.."
+    vexec docker run -a stdin -a stdout -it  \
         --name $container_name \
         --platform $platform \
         --privileged \
