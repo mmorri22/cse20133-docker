@@ -1,13 +1,12 @@
-CSE 20133/20232 Docker
+CSE 20133 Docker
 =============
 
 The Docker container-based virtualization service lets you run a
-minimal CSE 20133/20232 environment, including Linux, on a macOS or Windows
+minimal CSE 20133 environment, including Linux, on a macOS or Windows
 computer, without the overhead of a full virtual machine like VMware
 Workstation, VMware Fusion, or VirtualBox.
 
-It should be possible to do *all* CSE 20133/20232 assignments in the CSE 20133
-Docker container.
+It should be possible to do *all* CSE 20133/20232 assignments in the CSE 20133 Docker container.
 
 Advantages of Docker:
 
@@ -18,10 +17,8 @@ Advantages of Docker:
 
 Disadvantages of Docker:
 
-* Docker does not offer a graphical environment. You will need to run all CSE 20133/20232
-  programs exclusively in the terminal.
-* Docker technology is less user-friendly than virtual machines. You’ll have
-  to type weird commands.
+* Docker does not offer a graphical environment. You will need to run all CSE 20133/20232 programs exclusively in the terminal.
+* Docker technology is less user-friendly than virtual machines. You’ll have to type weird commands.
 
 ## Creating the CSE 20133 Docker container
 
@@ -72,7 +69,7 @@ cse20133-user@a47f05ea5085:~$ uname
 Linux
 cse20133-user@a47f05ea5085:~$ uname -a
 Linux 4f789b721d16 5.10.47-linuxkit #1 SMP PREEMPT Sat Jul 3 21:50:16 UTC 2021 aarch64 aarch64 aarch64 GNU/Linux
-cs300-user@a47f05ea5085:~$ exit
+cse20133-user@a47f05ea5085:~$ exit
 exit
 $
 ```
@@ -102,22 +99,22 @@ Explanation:
   laptop and are working on assignments that require an x86-64 Intel machine.
 * `-v LOCALDIR:LINUXDIR` says Docker should share a directory between your
   host and the Docker container. Here, I’ve asked for the host’s
-  `~/cs300-s22-devenv/home` directory to be mapped inside the container
-  onto the `/home/cs300-user` directory, which is the virtual machine
+  `~/cse20133-s22-devenv/home` directory to be mapped inside the container
+  onto the `/home/cse20133-user` directory, which is the virtual machine
   user’s home directory.
-* `cs300:latest` names the Docker image to run (namely, the one you built).
+* `cse20133:latest` names the Docker image to run (namely, the one you built).
 
 Here’s an example session:
 
 ```shellsession
-$ docker run -it --platform linux/amd64 --rm -v ~/cs300-s22-devenv/home:/home/cs300-user cs300:latest
-cs300-user@a15e6c4c8dbe:~$ ls
-cs300-s22-projects
-cs300-user@a15e6c4c8dbe:~$ echo "Hello, world"
+$ docker run -it --platform linux/amd64 --rm -v ~/cse20133-s22-devenv/home:/home/cse20133-user cse20133:latest
+cse20133-user@a15e6c4c8dbe:~$ ls
+cse20133-s22-projects
+cse20133-user@a15e6c4c8dbe:~$ echo "Hello, world"
 Hello, world
-cs300-user@a15e6c4c8dbe:~$ cs300-docker-version
+cse20133-user@a15e6c4c8dbe:~$ cse20133-docker-version
 1
-cs300-user@a15e6c4c8dbe:~$ exit
+cse20133-user@a15e6c4c8dbe:~$ exit
 exit
 $
 ```

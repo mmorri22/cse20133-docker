@@ -1,6 +1,6 @@
-# CSE 20133/20232 Development Environment README
+# CSE 20133 Development Environment README
 
-This repo contains a minimal dev environment setup for CSE 20133/20232. In particular, it provides the scripts to create the course Docker container.
+This repo contains a minimal dev environment setup for CSE 20133. In particular, it provides the scripts to create the course Docker container.
 
 ## Getting started
 
